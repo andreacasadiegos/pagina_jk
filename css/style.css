@@ -1,122 +1,446 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    
 }
 
 body {
     font-family: 'poppins', sans-serif;
 }
-
-.contenedor {
-    padding: 60 px 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-}
-
-.titulo {
-    color: #d66305;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-/* Header */
-
-header {
+header{
     width: 100%;
-    height: 700px;
-    background: hsla(202, 88%, 40%, 0.506);
-    background: -webkit-linear-gradient(to right, hsla(20, 94%, 48%, 0.575), hsla(202, 90%, 38%, 0.616)), url(../img/preparatoriaekarasuno.webp);
-    background: linear-gradient(to right, hsla(22, 94%, 49%, 0.616), hsla(202, 92%, 41%, 0.589)), url(../img/preparatoriaekarasuno.webp); 
-    background-size: cover;
-    background-attachment: fixed;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container_header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.logo img{
+    width: 100px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu nav{
+    margin: 0px 20px;
+}
+
+.menu nav ul{
+    display: flex;
+}
+
+.menu nav ul li{
+    list-style: none;
+    margin: 20px 16px;
+}
+
+.menu nav ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
     position: relative;
 }
 
-nav {
-    text-align: right;
-    padding: 30px 50px 0 0;
+.menu nav ul li a:hover{
+    color:  #83e30e;
 }
 
-nav>a {
-    color: #fff;
-    font-weight: 300;
-    text-decoration: none;
-    margin-right: 10px;
+.btn_quote{
+    display: block;
+    padding: 8px 40px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-weight: 500;
+    color: black;
+    margin: 0px 20px;
+    transition: all 300ms;
 }
 
-nav>a:hover {
-    text-decoration: underline;
+.btn_quote:hover{
+    background:  #83e30e;
+    color: black;
 }
 
-header .textos-header {
+.menu .socialMedia{
+    margin: 0px 10px;
+}
+
+.menu .socialMedia a{
+    margin: 0px 4px;
+}
+
+.menu .socialMedia img{
+    width: 20px;
+}
+
+.title{
     display: flex;
-    height: 430px;
-    width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    height: 700px;
+    color: #ffff;
+    background: linear-gradient(to right, hsla(93, 79%, 66%, 0.386), hsla(0, 37%, 85%, 0.277)), url(../img/fondo/frente2_cvo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.container__card-primary {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
 }
 
-.textos-header h1 {
-    font-size: 50px;
-    color: #fff;
+
+.card__primary {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+.text__card-primary {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.text__card-primary p {
+    color: #555;
+    font-size: 1em;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
 
 }
 
-.textos-header h2 {
-    font-size: 30px;
+.text__card-primary h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container__box-cardPrimary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+
+.box__card-primary {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.box__card-primary:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+.box__card-primary img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.box__card-primary:hover img {
+    transform: rotate(8deg);
+    transition: transform 0.3s ease;
+
+}
+
+.box__card-primary h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #444;
+    margin: 10px 0;
+    text-transform: capitalize;
+
+}
+
+.box__card-primary p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+
     font-weight: 300;
+    margin-top: 15px;
+}
+
+.box__card-primary:hover h2 {
+    color:  #83e30e;
+}
+
+/* Cambiar color del texto descriptivo al pasar el mouse */
+.box__card-primary:hover p {
+    color: #333;
+    /* Texto en color más oscuro al hacer hover */
+}
+.general {
+    display: flex;
+}
+.general-1{
+    width: 50%;
+    padding: 100px 200px 100px 100px;
+    background-color: #E1E2E6;
+}
+.general-2 {
+    /* Agregar la imagen */
+    background-image: url(../img/amistad_cvo/equipo1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+.general-3 {
+    /* Agregar la imagen */
+    background-image: url(../img/amistad_cvo/equipo2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+/* formulario */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     color: #fff;
 }
-main .sobre-nosotros{
-    padding: 30px 0 60px 0;
+
+/* Sección del formulario */
+.form-section {
+    width: 65%;
+    
 }
-.contenedor-sobre.nosotros{
+
+.form-section label {
+    display: flex;
+    margin: 15px 5px 5px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-section input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5pxs;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section input[type="text"]:focus {
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.form-section .button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #0e470d;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section .button:hover {
+    background-color: #e6e6e6;
+    color: #dc1a1a;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.form-mapa-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(135deg, #83e30e, #0eae2c);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.mapa-container {
+   
+    width: 34%;
+    height: 400px;
+}
+
+
+/* Contenedor principal de medios */
+.media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #a1a1a1, #a4ab8d);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+/* Contenedor general que puede incluir otros elementos multimedia */
+.media-container {
+    width: 100%;
+    /* El contenedor de medios ocupa el 100% del ancho de la página */
+    margin: 0 auto;
+    /* Centrar el contenedor */
+    background-color: #f8f8f8;
+    /* Color de fondo claro para hacer que el video destaque */
+    padding: 20px 0;
+    /* Espacio alrededor del contenido */
+}
+
+/* footer */
+
+footer {
+    background: linear-gradient(135deg, #a4ab8d, #9fa99f);
+    color: white;
+    margin-top: 20px;
+    padding: 100% 10;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.imagen-about-us{
-    width: 35%;
-    float: left;
-    margin-right: 35px;
+.footer-content {
+    flex: 1;
+    padding: 15px 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
 }
 
-.sobre-nosotros .contenido-textos{
-    width: 48%;   
-}
 
-.contenido-textos h3{
+.footer-content h4 {
+    font-size: 18px;
     margin-bottom: 10px;
-    text-decoration: none;
-    padding-left: 15px;
+  
 }
 
-.contenido-textos h3 span{
-    background: #d66305;
+
+.footer-content p {
+    font-size: 16px;
+    color: #f2f2f2;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 10px;
+
+}
+.footer-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
     color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-    margin-right: 5px;
+    margin-top: 30px;
+ 
 }
 
-.contenidos-textos p{
-    padding: 0px 0px 30px 15px;
-    font-weight: 300px;
-    text-align: center;
+.footer-title:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: white;
+    margin: 10px auto;
+   
+}
+
+
+footer i {
+    font-size: 18px;
+    color:#83e30e;
+    margin-right: 8px;
 
 }
+footer h2.elementor-heading-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: #3d3838;
+    padding: 10px 0;
+    margin: 0;
+    border-top: 0 solid #1d1c20;
+    border-bottom: 2px solid #181613;
+
+}
+
+footer {
+    padding: 0;
+    background-color:  #83e30e;
+}
+
 
 
 
